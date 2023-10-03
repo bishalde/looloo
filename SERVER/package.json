@@ -1,0 +1,27 @@
+{
+  "name": "projecttreebackend",
+  "version": "1.0.0",
+  "description": "this is the API backend for projecttree",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bishalde/ProjectTree.git"
+  },
+  "author": "Bishal De",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bishalde/ProjectTree/issues"
+  },
+  "homepage": "https://github.com/bishalde/ProjectTree#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongoose": "^7.5.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
