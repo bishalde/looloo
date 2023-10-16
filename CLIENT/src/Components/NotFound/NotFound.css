@@ -1,0 +1,14 @@
+.notfound {
+  position: relative;
+  top: 100px;
+  text-align: center;
+  height: 75vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.notfound h1 {
+  font-size: 5rem;
+  font-weight: 700;
+  color: #404040;
+}/*# sourceMappingURL=NotFound.css.map */

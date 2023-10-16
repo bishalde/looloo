@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+$poppins: 'Poppins', sans-serif;
+$black: #000000;
+$white:#ffffff;
+
+.navbar{
+    z-index: 100;
+    width: 100%;
+    height: 80px;
+    position: fixed;
+
+    padding: 10px 150px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+    border-bottom: 1px solid rgb(55, 55, 55);
+
+    .hamberger{
+        position: relative;
+        width: 20px;
+        display: none;
+        div{
+            width: 100%;
+            height:2px;
+            margin-bottom: 3px;
+            background-color:white;
+        }
+    }
+
+    .logo{
+        h1{
+            position: relative;
+            font-size: 1.7rem;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        img{
+            position: relative;
+            top: 6px;
+            width: 40px;
+            height: 40px;
+
+            &:hover{
+                transform: scale(1.1);
+            }
+        }
+    }
+
+    .links{
+        position: relative;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 30px;
+
+        a{
+            position: relative;
+            font-size: .9rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+
+            &:hover{
+                color: rgb(232, 185, 15);
+                transform: scale(1.1);
+            }
+
+            &.active{
+                color: rgb(232, 185, 15);
+            }
+            &.active::before{
+                content: '';
+                position: absolute;
+                bottom: -5px;
+                left: 0;
+                width: 100%;
+                height: 2px;
+                background-color: rgb(232, 185, 15);
+                transition: all 0.3s ease-in-out;
+                transform-origin: left;
+                transform: scaleX(0);
+            }
+            
+            &.active:hover::before{
+                transform: scaleX(1);
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 1024px){
+    .navbar{
+        transition: all .5s ease-in-out;
+        padding: 10px 70px;
+    }
+    
+}
+
+
+@media screen and (max-width: 768px){
+    .navbar{
+        transition: all .5s ease-in-out;
+        padding: 10px 20px;
+
+        .hamberger{
+            display: block;
+            z-index: 10001;
+        }
+
+        .logo{
+            h1{
+                font-size: 1.3rem;
+                font-weight: 600;
+            }
+            img{
+                position: relative;
+                top: 4px;
+                width: 25px;
+                height: 25px;
+    
+                &:hover{
+                    transform: scale(1.1);
+                }
+            }
+        }
+
+
+        .links{
+            background-color: #092c35f0;
+            position: absolute;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100vh;
+            transform: translateX(-100%);
+            transition: all .5s ease-in-out;
+            a{
+                font-size: 1.5rem;
+                background-color: transparent;
+            }
+        }
+
+        .navActive{
+            transform: translateX(0%);
+        }
+    }
+    
+}

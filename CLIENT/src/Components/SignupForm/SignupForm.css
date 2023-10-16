@@ -1,0 +1,117 @@
+.signupframe {
+  position: relative;
+  top: 120px;
+  width: 100%;
+  min-height: 80vh;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.signupframe .loginbox {
+  border: 2px solid rgb(55, 55, 55);
+  height: 90%;
+  width: 50%;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 100px;
+}
+.signupframe .loginbox form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+.signupframe .loginbox form h1 {
+  text-align: center;
+  font-size: 4em;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.signupframe .loginbox form label {
+  font-size: 1.5em;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.signupframe .loginbox form input {
+  height: 50px;
+  border-radius: 10px;
+  border: 2px solid rgb(55, 55, 55);
+  margin-bottom: 20px;
+  padding: 0 10px;
+  font-size: 1.3em;
+  font-weight: 600;
+  color: rgb(232, 185, 15);
+  font-family: "Poppins", sans-serif;
+}
+.signupframe .loginbox form .login-btns {
+  width: 100%;
+  text-align: center;
+}
+.signupframe .loginbox form .login-btns button {
+  width: 40%;
+  height: 50px;
+  border-radius: 10px;
+  border: 2px solid #ffffff;
+  margin: 0 10px;
+  font-size: 1em;
+  font-weight: 600;
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.signupframe .loginbox form .login-btns button:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+.signupframe .loginbox form .login-btns button.btn-sec {
+  background-color: #ffffff;
+  color: #000000;
+}
+.signupframe .loginbox form .login-btns button.btn-sec:hover {
+  background-color: rgb(232, 185, 15);
+  border-color: rgb(232, 185, 15);
+  color: #000000;
+}
+
+@media screen and (max-width: 1024px) {
+  .signupframe .loginbox {
+    border: 2px solid rgb(55, 55, 55);
+    height: 90%;
+    width: 60%;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 70px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .signupframe {
+    top: 80px;
+  }
+  .signupframe .loginbox {
+    width: 90%;
+    padding: 50px 40px;
+  }
+  .signupframe .loginbox form h1 {
+    font-size: 3rem;
+  }
+  .signupframe .loginbox form label {
+    font-size: 1.2rem;
+  }
+  .signupframe .loginbox form input {
+    height: 50px;
+    font-size: 1.1rem;
+  }
+  .signupframe .loginbox form .login-btns button, .signupframe .loginbox form .login-btns a {
+    height: 45px;
+    font-size: 1rem;
+  }
+}/*# sourceMappingURL=SignupForm.css.map */

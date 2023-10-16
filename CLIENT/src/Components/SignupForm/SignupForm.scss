@@ -1,0 +1,150 @@
+$poppins: 'Poppins', sans-serif;
+$black: #000000;
+$white:#ffffff;
+$line:rgb(55, 55, 55);
+$secondaryColor: rgb(232, 185, 15);
+$secondayColor2: rgb(175, 173, 173);
+
+.signupframe{
+    position: relative;
+    top:120px;
+    width:100%;
+    min-height: 80vh;
+    border-radius: 10px;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+    .loginbox{
+        border: 2px solid $line;
+        height: 90%;
+        width: 50%;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        padding: 50px 100px;
+
+
+        form{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 100%;
+
+            h1{
+                text-align: center;
+                font-size: 4em;
+                font-weight: 600;
+                margin-bottom: 10px;
+            }
+
+            label{
+                font-size: 1.5em;
+                font-weight: 600;
+                margin-bottom: 10px;
+            }
+
+            input{
+                height: 50px;
+                border-radius: 10px;
+                border: 2px solid $line;
+                margin-bottom: 20px;
+                padding: 0 10px;
+                font-size: 1.3em;
+                font-weight: 600;
+                color: $secondaryColor;
+                font-family: $poppins;
+            }
+
+            .login-btns{
+                width: 100%;
+                text-align: center;
+
+                button{
+                    width: 40%;
+                    height: 50px;
+                    border-radius: 10px;
+                    border: 2px solid $white;
+                    margin: 0 10px;
+                    font-size: 1em;
+                    font-weight: 600;
+                    color: $white;
+                    font-family: $poppins;
+                    cursor: pointer;
+                    transition: all 0.3s ease-in-out;
+
+                    &:hover{
+                        background-color: $white;
+                        color: $black;
+                    }
+
+                    &.btn-sec{
+                        background-color: $white;
+                        color: $black;
+                        &:hover{
+                            background-color: $secondaryColor;
+                            border-color: $secondaryColor;
+                            color: $black;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .signupframe{
+              
+        .loginbox{
+            border: 2px solid $line;
+            height: 90%;
+            width: 60%;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 50px 70px;
+        }
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .signupframe{  
+        top: 80px;
+        .loginbox{
+            width: 90%;
+            padding: 50px 40px;
+            
+            form{
+                h1{
+                    font-size: 3rem;
+                }
+
+                label{
+                    font-size: 1.2rem;
+                }
+
+                input{
+                    height: 50px;
+                    font-size: 1.1rem;
+                }
+
+                .login-btns{
+                    button,a{
+                        height: 45px;
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+    }
+}

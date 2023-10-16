@@ -1,0 +1,76 @@
+footer {
+  position: relative;
+  top: 120px;
+  padding: 30px 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 30px;
+}
+footer .footerinfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+}
+footer .footerinfo h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+footer .footerinfo h4 {
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+footer .footerinfo .social {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5px;
+}
+footer .footerinfo .social img {
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+}
+footer .footerinfo .social img:hover {
+  transform: scale(1.1);
+  transition: all 0.3s ease;
+}
+footer .footercompany h2 {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.fbox {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+@media screen and (max-width: 768px) {
+  footer {
+    flex-direction: column;
+    gap: 30px;
+    padding: 30px 20px;
+  }
+  footer .footerinfo {
+    align-items: center;
+    text-align: center;
+  }
+  footer .footerinfo h1 {
+    font-size: 2rem;
+  }
+  footer .footerinfo h4 {
+    font-size: 0.75rem;
+  }
+  footer .footercompany h2 {
+    font-size: 1.1rem;
+  }
+  .fbox {
+    width: 100%;
+  }
+}/*# sourceMappingURL=Footer.css.map */
