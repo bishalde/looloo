@@ -5,6 +5,7 @@ import Flip from 'react-reveal/Flip';
 
 
 function LoginForm() {
+  document.title="Login | ProjectTree"
     const [userName, setUserName] = useState('')
     const [Password, setPassword] = useState('')
   

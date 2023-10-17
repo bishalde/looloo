@@ -7,21 +7,18 @@ import Flip from "react-reveal/Flip";
 import "./SignupForm.css";
 
 function SignupForm() {
+  document.title="Register | ProjectTree"
   const [userName, setUsername] = useState("bishalde");
   const [Email, setEmail] = useState("itsbishalde@protonmail.com");
   const [Password, setPassword] = useState("12345678");
 
   const navigate = useNavigate();
 
-  const axiosWithCredentials = axios.create({
-    withCredentials: true,
-    baseURL: "http://127.0.0.1:8000",
-  });
 
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      const response = await axiosWithCredentials.post("/register", {
+      const response = await axios.post("http://127.0.0.1:8000/register", {
         username: userName,
         email: Email,
         password: Password,

@@ -4,6 +4,7 @@ import './NotFound.css'
 
 
 const NotFound = () => {
+  document.title="404NotFound | ProjectTree"
   return (
     <>
       <section className="notfound">

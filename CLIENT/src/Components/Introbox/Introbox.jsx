@@ -1,37 +1,26 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
 import { Link } from "react-router-dom";
 import "./Introbox.css";
 
+import axios from "axios";
+
 import Zoom from "react-reveal/Zoom";
-import Fade from 'react-reveal/Fade';
+import Fade from "react-reveal/Fade";
 
 const Introbox = () => {
 
-  const [websiteData,setWebsiteData] = useState({})
+  document.title="HomePage | ProjectTree"
+  const [websiteData, setWebsiteData] = useState({});
 
-  useEffect(()=>{
-    const fetchData=async()=>{
-      const axiosWithCredentials = axios.create({
-        withCredentials: true,
-        baseURL: "http://127.0.0.1:8000",
-      });
-      try{
-        const response = await axiosWithCredentials.get("/")
-        setWebsiteData(response.data)
-      }
-      catch(error){
-        console.log(error)
-      }
-      
-      
-    }
-
-    fetchData()
-
-
-
-  },[])
+  useEffect(() => {
+    const fetchData = async () => {
+      axios
+        .get("http://127.0.0.1:8000")
+        .then((data) => setWebsiteData(data.data))
+        .catch((error) => console.log(error));
+    };
+    fetchData();
+  }, []);
   return (
     <>
       <section className="introbox">
@@ -98,23 +87,23 @@ const Introbox = () => {
           </div>
         </Fade>
         <Fade right>
-        <section className="stats">
-          <h1>Our Stats</h1>
-          <div className="statsbox">
-            <div className="stats-box">
-              <h1>Website Visits</h1>
-              <h4>{  websiteData.totalVisites || 'NaN' }</h4>
+          <section className="stats">
+            <h1>Our Stats</h1>
+            <div className="statsbox">
+              <div className="stats-box">
+                <h1>Website Visits</h1>
+                <h4>{websiteData.totalVisites || "NaN"}</h4>
+              </div>
+              <div className="stats-box">
+                <h1>Projects</h1>
+                <h4>{websiteData.totalProjects || "NaN"}</h4>
+              </div>
+              <div className="stats-box">
+                <h1>Users</h1>
+                <h4>{websiteData.totalUsers || "NaN"}</h4>
+              </div>
             </div>
-            <div className="stats-box">
-              <h1>Projects</h1>
-              <h4>{  websiteData.totalProjects || 'NaN' }</h4>
-            </div>
-            <div className="stats-box">
-              <h1>Users</h1>
-              <h4>{  websiteData.totalUsers || 'NaN' }</h4>
-            </div>
-          </div>
-        </section>
+          </section>
         </Fade>
       </section>
     </>
